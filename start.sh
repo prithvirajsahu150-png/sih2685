@@ -18,10 +18,4 @@ uvicorn api.main:app --host 127.0.0.1 --port 8000 &
 
 # Start Next.js frontend in the foreground
 echo "Starting Next.js..."
-# If we're in production use npm start, otherwise npm run dev
-if [ "$NODE_ENV" = "production" ]; then
-  npm run build
-  npm start
-else
-  npm run dev
-fi
+npm start

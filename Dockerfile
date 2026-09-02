@@ -24,6 +24,10 @@ RUN pip install --no-cache-dir -r api/requirements.txt
 # Copy all the rest of the application files
 COPY . .
 
+# Build the Next.js application during the Docker build phase
+# (This prevents "Too many open files" errors caused by restrictive runtime ulimits)
+RUN npm run build
+
 # Expose Next.js port
 EXPOSE 3000
 
