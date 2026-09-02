@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+pydantic
+torch
+networkx
+geopandas
+pymongo
+numpy
+httpx
+scikit-learn
+joblib
